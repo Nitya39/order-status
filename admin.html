@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Update Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="skyline.jpg" alt="Skyline Customs Logo" />
+          Skyline Customs
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://discord.gg/skylinecustoms">Support</a>
+          <a href="/showcase">Showcase</a>
+          <a href="/pricing">Pricing</a>
+        </div>
+        <!-- Call To Action Button -->
+        <button class="cta" href="https://discord.gg/skylinecustoms">Get Started</button>
+        <!-- Hamburger Icon -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <br>
+
+  <div class="container">
+    <h1>Admin - Update Order</h1>
+    
+    <label for="orderId">Enter Order ID:</label>
+    <input type="text" id="orderId" placeholder="Order ID">
+    <button onclick="getOrderDetails()">Get Order Details</button>
+    
+    <div id="orderDetails"></div>
+
+    <div id="updateForm" style="display:none;">
+      <h2>Update Order</h2>
+      <label for="product">Product:</label>
+      <input type="text" id="product" placeholder="Product Name">
+      <label for="price">Price:</label>
+      <input type="text" id="price" placeholder="Price">
+      <label for="paymentType">Payment Type:</label>
+      <input type="text" id="paymentType" placeholder="Payment Type">
+      <label for="orderNotes">Order Notes:</label>
+      <input type="text" id="orderNotes" placeholder="Order Notes">
+      <label for="paid">Paid:</label>
+      <input type="checkbox" id="paid">
+      
+      <!-- Order Status Update -->
+      <label for="orderStatus">Order Status:</label>
+      <select id="orderStatus">
+        <option value="Started">Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Half Done">Half Done</option>
+        <option value="Completed">Completed</option>
+      </select>
+
+      <button onclick="updateOrder()">Update Order</button>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
