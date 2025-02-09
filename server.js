@@ -76,7 +76,7 @@ app.get('/admin', (req, res) => {
 
 // Start the server
 app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+  console.log('Server running on order-status-production.up.railway.app');
 });
 
 
